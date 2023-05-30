@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WassimAD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(255, 196, 0);
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .container img {
+      max-width: 45%;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Override background-related properties for the form */
+    form {
+      background: none;
+      box-shadow: none;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <div class="container">
+    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/350643740_1620805711772640_3332282584894785333_n.jpg?stp=dst-jpg_s720x720&_nc_cat=108&ccb=1-7&_nc_sid=aee45a&_nc_ohc=mUBBpccUj1wAX97ztXI&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQq_BqznHO6URhD4DBiI4Ho0snVnzj-rITrjdlfUBzzfg&oe=649D5D17" alt="Left Image">
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Log In">
+    </form>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (password === '1234') {
+        alert('Login successful! Redirecting to the empty page.');
+        window.location.href = 'empty.html';
+      } else {
+        alert('Incorrect password. Try again.');
+      }
+    });
+  </script>
+</body>
+</html>
